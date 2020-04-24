@@ -1,0 +1,46 @@
+<html>
+	<head>
+	</head>
+	<script>
+		
+		// add7 asks for a number and then returns the sum of that number and 7
+		let addNum = prompt("What number?");
+		function add7 (addNum) {
+			let addAnswer = parseInt(addNum) + 7;
+			return alert(addAnswer);
+		}
+		
+		add7(addNum);
+		
+		// multiply asks for two numbers and then returns the product of the input numbers
+		let multiplyNum1 = prompt("What's the first number?");
+		let multiplyNum2 = prompt("What's the second number?");
+		function multiply (multiplyNum1, multiplyNum2) {
+			let multiplyAnswer = parseInt(multiplyNum1 * multiplyNum2);
+			return alert(multiplyAnswer); 
+		}
+		multiply(multiplyNum1, multiplyNum2);
+		
+		// capitalize returns the input word(s) with the initial letter of the first word capitalized
+		let capitalizeStr = prompt("What's your favorite holiday? (Answer in lowercase, please.)").toLowerCase();
+		function capitalize (capitalizeStr) {
+			let firstLetter, lastLetters, capitalizeAnswer;
+  			firstLetter = capitalizeStr[0].toUpperCase();
+			lastLetters = capitalizeStr.slice(1, capitalizeStr.length);
+			capitalizeAnswer = firstLetter.concat(lastLetters);
+			return alert(capitalizeAnswer);
+		}
+		capitalize(capitalizeStr);
+		
+		// lastLetter returns the last letter of the final input word(s)
+		let lastLetterStr = prompt("Give me a word, please! Any word!");
+		function lastLetter (lastLetterStr) {
+			let lastLetterAnswer = lastLetterStr[lastLetterStr.length-1];
+		return alert(lastLetterAnswer);
+		}
+		lastLetter(lastLetterStr);
+	</script>
+	<body>
+		<p> This is a test.</p>
+	</body>
+</html>
