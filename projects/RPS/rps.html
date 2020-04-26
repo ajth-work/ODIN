@@ -19,25 +19,38 @@
 
     function playRPS(playerSelection, computerSelection) {
         computerSelection = computerPlay();
-        playerSelection = prompt("Type 'rock', 'paper', or 'scissors', please!")
+        playerSelection = prompt("Type rock (r), paper (p), or scissors (s), please!").toLowerCase();
+        console.log(playerSelection)
         let roundResult;
+        switch (playerSelection) {
+            case playerSelection[0] == "r":
+                playerSelection = "rock";
+                break;
+            case playerSelection[0] == "P":
+                playerSelection = "paper";
+                break;
+            case playerSelection[0] == "s":
+                playerSelection = "scissors";
+                break;
+        }
         if (
-            (playerSelection == "rock" && computerSelection == "scissors")
-            || (playerSelection == "paper" && computerSelection == "rock")
-            || (playerSelection == "scissors" && computerSelection == "paper")
+            (playerSelection[0] == "r" && computerSelection[0] == "s")
+            || (playerSelection[0] == "p" && computerSelection[0] == "r")
+            || (playerSelection[0] == "s" && computerSelection[0] == "p")
         ) {
             roundResult = "win";
-            console.log(`You won! You chose ${playerSelection} and Computer chose ${computerSelection}.`)
+            console.log(`You won! You chose [${playerSelection}] and Computer chose [${computerSelection}].`)
         } else if (playerSelection == computerSelection) {
             roundResult = "tie";
-            console.log(`You tied. You and Computer both chose ${computerSelection}.`)
+            console.log(`You tied. You and Computer both chose [${computerSelection}].`)
         } else {
             roundResult = "lose";
-            console.log(`You lost! You chose ${playerSelection} and Computer chose ${computerSelection}.`);
+            console.log(`You lost! You chose [${playerSelection}] and Computer chose [${computerSelection}].`);
         } return roundResult;
     }
 
-    const num = prompt("How many times would you like to play? (please input only numerical values)")
+    const num = Number(prompt("How many times would you like to play? (numbers only, please)"));
+    console.log(num);
 
     function game(num) {
         let winCount = 0, loseCount = 0, tieCount = 0;
@@ -50,11 +63,8 @@
             } else if (someValue == "tie") {
                 tieCount++;
             }
-            console.log(
-                `Wins: ${winCount} | Loses: ${loseCount} | Ties: ${tieCount} || Matches Remaining: ${(num - i) - 1}`)
-        }
-        console.log("Well Done!")
-        return;
+            console.log(`Wins: ${winCount} | Loses: ${loseCount} | Ties: ${tieCount} || Matches Remaining: ${(num - i) - 1}`);
+        } return alert(`${num} match(es) completed! You won ${Math.floor(((winCount / num) * 100))}% of the matches. Thanks for playing.`);
     };
     console.log(game(num));
 </script>
