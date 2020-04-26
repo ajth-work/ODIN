@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>This is a test for the RPS Project.</p>
+</body>
+<script>
+    function computerPlay() {
+        // the computer randomly returns either "rock", "paper", or "scissors"
+        let choices, computerChoice;
+        choices = ["rock", "paper", "scissors"]
+        computerChoice = choices[Math.floor(Math.random() * choices.length)]
+        console.log(`Computer has made its move.`);
+        return computerChoice;
+    };
+
+    function playRPS(playerSelection, computerSelection) {
+        computerSelection = computerPlay();
+        playerSelection = prompt("Type 'rock', 'paper', or 'scissors', please!")
+        let roundResult;
+        if (
+            (playerSelection == "rock" && computerSelection == "scissors")
+            || (playerSelection == "paper" && computerSelection == "rock")
+            || (playerSelection == "scissors" && computerSelection == "paper")
+        ) {
+            roundResult = "win";
+            console.log(`You won! You chose ${playerSelection} and Computer chose ${computerSelection}.`)
+        } else if (playerSelection == computerSelection) {
+            roundResult = "tie";
+            console.log(`You tied. You and Computer both chose ${computerSelection}.`)
+        } else {
+            roundResult = "lose";
+            console.log(`You lost! You chose ${playerSelection} and Computer chose ${computerSelection}.`);
+        } return roundResult;
+    }
+
+    const num = prompt("How many times would you like to play? (please input only numerical values)")
+
+    function game(num) {
+        let winCount = 0, loseCount = 0, tieCount = 0;
+        for (let i = 0; i < num; i++) {
+            let someValue = playRPS();
+            if (someValue == "win") {
+                winCount++;
+            } else if (someValue == "lose") {
+                loseCount++;
+            } else if (someValue == "tie") {
+                tieCount++;
+            }
+            console.log(
+                `Wins: ${winCount} | Loses: ${loseCount} | Ties: ${tieCount} || Matches Remaining: ${(num - i) - 1}`)
+        }
+        console.log("Well Done!")
+        return;
+    };
+    console.log(game(num));
+</script>
+
+</html>
