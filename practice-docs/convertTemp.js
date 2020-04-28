@@ -1,7 +1,7 @@
 let answer;
 
 function ftoc(num){
-answer = ((num - 32) * (5/9))
+answer = ((num - 32) * (5/9));
 return `${num} F converts to ${answer.toFixed(1)} C`;
 
 }
