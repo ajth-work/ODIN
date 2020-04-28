@@ -1,0 +1,52 @@
+<!-- your html file: -->
+<body>
+  <h1>
+    DOM PRACTICE DOC
+  </h1>
+  <div id="container"></div>
+</body>
+
+<script>
+const container = document.querySelector('#container');
+
+const content = document.createElement('div');
+content.classList.add('content');
+content.textContent = 'This is the nice text-content!';
+
+const redText = document.createElement('p');
+redText.style.color = "red";
+redText.textContent = "Hey, I'm red!";
+
+const blueText = document.createElement('h3');
+blueText.style.color = "blue";
+blueText.textContent = "I'm a blue h3!";
+
+container.appendChild(content);
+container.appendChild(redText);
+container.appendChild(blueText);
+
+const blackPink = document.createElement('div');
+blackPink.style['background-color'] = "pink";
+blackPink.style['border-color'] = "black";
+blackPink.style['border-style'] = "solid";
+
+const blackPinkh1 = document.createElement('h1');
+blackPinkh1.textContent = "I'm in a a div";
+
+const blackPinkp = document.createElement('p');
+blackPinkp.textContent = "ME TOO!";
+
+blackPink.appendChild(blackPinkh1);
+blackPink.appendChild(blackPinkp);
+container.appendChild(blackPink);
+</script>
+
+<!-- 
+O - a <p> with red text that says “Hey I’m red!”
+O - an <h3> with blue text that says “I’m a blue h3!”
+O - a <div> with a black border and pink background color with the following elements inside of it:
+	O - another <h1> that says “I’m in a div”
+	O - a <p> that says “ME TOO!”
+	Hint for this one: after creating the div with createElement, append the <h1> and <p> to it before adding it to the container.
+
+--!>
