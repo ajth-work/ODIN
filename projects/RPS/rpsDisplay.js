@@ -16,13 +16,13 @@ function playRPS(playerSelection) {
         || (playerSelection == "scissors" && computerSelection == "paper")
     ) {
         roundResult = "win";
-        alert(`You won! You chose [${playerSelection}] and Computer chose [${computerSelection}].`)
+        resultsInfo.textContent = `You won! You chose [${playerSelection}] and Computer chose [${computerSelection}].`;
     } else if (playerSelection == computerSelection) {
         roundResult = "tie";
-        alert(`You tied. You and Computer both chose [${computerSelection}].`)
+        resultsInfo.textContent = `You tied. You and Computer both chose [${computerSelection}].`
     } else {
         roundResult = "lose";
-        alert(`You lost! You chose [${playerSelection}] and Computer chose [${computerSelection}].`);
+        resultsInfo.textContent = `You lost! You chose [${playerSelection}] and Computer chose [${computerSelection}].`;
     } return roundResult;
 };
 
@@ -44,4 +44,16 @@ buttons.forEach((button) => {
         return playRPS(btnResponse);
     });
 });
+
+const resultsDivHeader = document.createElement('resultsDivHeader');
+resultsDivHeader.textContent = "Round Results: ";
+resultsDivHeader.style.cssText = "color: red; font-size: 20px; paddingBottom: 20px;";
+body.appendChild(resultsDivHeader);
+
+const linebreak = document.createElement('br');
+body.appendChild(linebreak);
+
+const resultsInfo = document.createElement('resultsInfo');
+body.appendChild(resultsInfo);
+
 
