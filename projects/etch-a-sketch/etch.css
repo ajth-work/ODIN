@@ -1,13 +1,16 @@
-p {
-	color: red;
+h1 {
+	color: crimson;
 	text-align: center;
 	margin-top: 20px;
+	font-family: 'Jost', sans-serif;
+	font-size: 30px;
 	}
 #container {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	border: 4px solid black;
+	border-radius: 4px;
 	width: 500px;
 	height: 500px;
 	margin: 0 auto;
@@ -17,5 +20,5 @@ p {
 .cell {
 	border-width: 1px;
 	border-style: solid;
-	border-color: red;
+	border-color: black;
 }
