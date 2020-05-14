@@ -4,10 +4,18 @@ p {
 	margin-top: 20px;
 	}
 #container {
-	border: 2px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	border: 4px solid black;
 	width: 500px;
 	height: 500px;
 	margin: 0 auto;
 	margin-top: 30px;
-	display: grid;
 	}
+	
+.cell {
+	border-width: 1px;
+	border-style: solid;
+	border-color: red;
+}
