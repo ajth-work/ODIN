@@ -1,10 +1,13 @@
 body {	
 	font-family: 'Jost', sans-serif;
-	font-size: 20px
+	font-size: 20px;
+	background-color: lightcoral;
+	color: black;
+
 }
 
 h1 {
-	color: crimson;
+	color: black;
 	text-align: center;
 	margin-top: 20px;
 	font-size: 30px;
@@ -12,28 +15,29 @@ h1 {
 	
 #outer-container {
 	display: block;
-	border: 4px solid black;
+	border: 4px solid  hsl(0, 78.9%, 80.2%);
 	border-radius: 4px;
 	width: 400px;
 	height: 500px;
 	margin: 0 auto;
 	margin-top: 30px;
 	padding: 10px;
+	background-color: hsl(0, 78.9%, 90.2%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 	
 #top-inner-container{	
 	display: block;
-	border: 2px solid red;
+	border: 2px solid black;
 	border-radius: 4px;
 	}
 	
 #display{
-	margin-top: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
 	text-align: right;
 	height: 25px;
+	background-color: lightgray;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 #bottom-inner-container{
 	display: grid;
@@ -45,10 +49,9 @@ h1 {
 		"button4 button5 button6 buttonPlus"
 		"button1 button2 button3 buttonEquals"
 		"button0 button000 buttonDot buttonEquals";
-	margin-top: 40px;
+	margin-top: 50px;
 	margin-right: 5px;
 	margin-left: 5px;
-	border: 2px solid red;
 	border-radius: 4px;
 	height: 400px;
 	}
@@ -59,7 +62,21 @@ h1 {
 	border-color: black;
 }
 
-.buttons {margin: 3px}
+.buttons {
+	margin: 5px;
+	color: black;
+	font-family: "Jost", sans-serif;
+	font-size: 18px;
+	border-radius: 5px;
+	border-color: black;
+	background-color: hsl(0, 78.9%, 64.2%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+.buttons:hover {
+  background-color: crimson;
+  color: black;
+}
 
 #button1 {grid-area:button1;}
 #button2 {grid-area:button2;}
