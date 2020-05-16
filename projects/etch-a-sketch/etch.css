@@ -1,42 +1,49 @@
 body {
-	background-color: lightcoral;
-	color: black;
-	text-align: center;
-	margin-top: 20px;
-	font-family: 'Jost', sans-serif;
-	font-size: 30px;
+  background-color: lightcoral;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
 }
 
 #container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	background-color: lightgray;
-	border: 5px solid black;
-	border-radius: 5px;
-	width: 500px;
-	height: 500px;
-	margin: 0 auto;
-	margin-top: 30px;
-	}
-	
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: hsl(0, 78.9%, 90.2%);
+  border: 5px solid black;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
 .cell {
-	border-width: 1px;
-	border-style: solid;
-	border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
 
 .button {
-	color:black;
-	font-family: 'Jost', sans-serif;
-	font-size: 18px;
-	border-radius: 5px;
-	border-color: black;
-	background-color: 	
-	hsl(0,78.9%,65.2%);
-	margin-top: 10px;
+  color: black;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: black;
+  background-color: hsl(0, 78.9%, 64.2%);
+  margin-top: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button:hover {
-	background-color:crimson;
+  background-color: crimson;
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }
