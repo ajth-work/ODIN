@@ -1,41 +1,44 @@
+<!--delete one character button, history button and display history in display div, get rid of 000 or change to 00, 
+-->
+
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Calculator Project - AJTHwork</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="calc.css">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator Project - AJTHwork</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="calc.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body id="body">
-<h1>Calculator Project</h1>
-	<div id="outer-container">
-		<div id="top-inner-container">
-			<div id="display">123456789</div>
-		</div>
-		<div id="bottom-inner-container">
-			<button id="button1" class="buttons">1</button>
-			<button id="button2" class="buttons">2</button>
-			<button id="button3" class="buttons">3</button>
-			<button id="button4" class="buttons">4</button>
-			<button id="button5" class="buttons">5</button>
-			<button id="button6" class="buttons">6</button>
-			<button id="button7" class="buttons">7</button>
-			<button id="button8" class="buttons">8</button>
-			<button id="button9" class="buttons">9</button>
-			<button id="button0" class="buttons">0</button>
-			<button id="button000" class="buttons">000</button>
-			<button id="buttonDot" class="buttons">.</button>
-			<button id="buttonEquals" class="buttons">=</button>
-			<button id="buttonPlus" class="buttons">+</button>
-			<button id="buttonMinus" class="buttons">-</button>
-			<button id="buttonMultiply" class="buttons">*</button>
-			<button id="buttonDivide" class="buttons">/</button>
-			<button id="buttonClear" class="buttons">clr</button>
-		</div>
+	<h1 id="title">Calculator Project</h1>
+	<div id="container">
+		<input id="display"></input>
+		<button data-key="97" id="button1" class="buttons numbers"><kbd>1</kbd></button>
+		<button data-key="98" id="button2" class="buttons numbers"><kbd>2</kbd></button>
+		<button data-key="99" id="button3" class="buttons numbers"><kbd>3</kbd></button>
+		<button data-key="100" id="button4" class="buttons numbers"><kbd>4</kbd></button>
+		<button data-key="101" id="button5" class="buttons numbers"><kbd>5</kbd></button>
+		<button data-key="102" id="button6" class="buttons numbers"><kbd>6</kbd></button>
+		<button data-key="103" id="button7" class="buttons numbers"><kbd>7</kbd></button>
+		<button data-key="104" id="button8" class="buttons numbers"><kbd>8</kbd></button>
+		<button data-key="105" id="button9" class="buttons numbers"><kbd>9</kbd></button>
+		<button data-key="96" id="button0" class="buttons numbers"><kbd>0</kbd></button>
+		<button data-key="189" id="buttonNegPos" class="buttons numbers"><kbd>&plusmn;</kbd></button>
+		<button data-key="110" id="buttonDot" class="buttons numbers"><kbd>.</kbd></button>
+		<button data-key="13" id="buttonEquals" class="buttons"><kbd>=</kbd></button>
+		<button data-key="107" id="buttonPlus" class="buttons mdas"><kbd>+</kbd></button>
+		<button data-key="109" id="buttonMinus" class="buttons mdas"><kbd>&#8722;</kbd></button>
+		<button data-key="106" id="buttonMultiply" class="buttons mdas"><kbd>&#215;</kbd></button>
+		<button data-key="111" id="buttonDivide" class="buttons mdas"><kbd>&#247;</kbd></button>
+		<button data-key="8" id="buttonClear" class="buttons clear"><kbd>C</kbd></button>
+		<button data-key="46" id="buttonAllClear" class="buttons clear"><kbd></kbd>AC</button>
 	</div>
+	<a id="footer" href="https://www.github.com/ajth-work" target="_blank">@ajth-work</a>
 </body>
 
 <script src="calc.js"></script>
