@@ -13,33 +13,32 @@ function displayText() {
     buttons.forEach((button) => {
         button.addEventListener("click", (e) => {
             switch (button.id) {
-                case "button0":
-                case "button1":
-                case "button2":
-                case "button3":
-                case "button4":
-                case "button5":
-                case "button6":
-                case "button7":
-                case "button8":
-                case "button9":
-                    if (newStr.length >= 9) {
-                        display.style.wordWrap = "break-word";
-                        if (newStr.length >= 20) {
-                            break;
-                        }
-
-                    } 
+                case "buttonDot":
                     console.log(button.id)
-                    newStr = newStr.concat(`${button.textContent}`);
-                    console.log(newStr);
+                    if (newStr.indexOf(".") == -1) {
+                        newStr = newStr.concat(`${button.textContent}`);
+                    }
                     break;
                 case "buttonClear":
+                    console.log(button.id)
                     newStr = newStr.slice(0, -1);
                     console.log(newStr);
                     break;
                 case "buttonAllClear":
                     newStr = "";
+                    console.log(newStr)
+                    break;
+                default:
+                    console.log(button.id)
+                    if (newStr.length >= 9) {
+                        display.style.wordWrap = "break-word";
+                        if (newStr.length >= 20) {
+                            break;
+                        }
+                    }
+                    newStr = newStr.concat(`${button.textContent}`);
+                    console.log(newStr);
+                    break;
             }
             display.textContent = newStr;
         });
