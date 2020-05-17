@@ -37,6 +37,49 @@ function displayText() {
                     newStr = "";
                     console.log(newStr)
                     break;
+                case "buttonPlus":
+                    play();
+                    if (((button.textContent == "+") && (newStr[newStr.length-1] == "+" )) ||
+                    ((button.textContent == "+") && (newStr[newStr.length-1] == "−")) ||
+                    ((button.textContent == "+") && (newStr[newStr.length-1] == "÷")) ||
+                    ((button.textContent == "+") && (newStr[newStr.length-1] == "×"))) {
+                        newStr = newStr.substring(0, newStr.length - 1)
+                    }
+                    newStr = newStr.concat(`${button.textContent}`);
+                    break;
+                case "buttonMinus":
+                    play();
+                    if (((button.textContent == "−") && (newStr[newStr.length-1] == "−" )) ||
+                    ((button.textContent == "−") && (newStr[newStr.length-1] == "+")) ||
+                    ((button.textContent == "−") && (newStr[newStr.length-1] == "÷")) ||
+                    ((button.textContent == "−") && (newStr[newStr.length-1] == "×"))) {
+                        newStr = newStr.substring(0, newStr.length - 1)
+                    }
+                    newStr = newStr.concat(`${button.textContent}`);
+                    break;
+                case "buttonDivide":
+                    play();
+                    if (((button.textContent == "÷") && (newStr[newStr.length-1] == "÷")) ||
+                    ((button.textContent == "÷") && (newStr[newStr.length-1] == "−")) ||
+                    ((button.textContent == "÷") && (newStr[newStr.length-1] == "+")) ||
+                    ((button.textContent == "÷") && (newStr[newStr.length-1] == "×"))) {
+                        newStr = newStr.substring(0, newStr.length - 1)
+                    }
+                    newStr = newStr.concat(`${button.textContent}`);
+                    break;
+                case "buttonMultiply":
+                    play();
+                    if (((button.textContent == "×") && (newStr[newStr.length-1] == "×")) ||
+                    ((button.textContent == "×") && (newStr[newStr.length-1] == "−")) ||
+                    ((button.textContent == "×") && (newStr[newStr.length-1] == "+")) ||
+                    ((button.textContent == "×") && (newStr[newStr.length-1] == "÷"))) {
+                        newStr = newStr.substring(0, newStr.length - 1)
+                    }
+                    newStr = newStr.concat(`${button.textContent}`);
+                    break;
+                case "buttonEquals":
+                    play();
+                    break;
                 default:
                     play();
                     console.log(button.id)
