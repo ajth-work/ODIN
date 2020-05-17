@@ -23,11 +23,16 @@ function displayText() {
                 case "button7":
                 case "button8":
                 case "button9":
-                    if(newStr.length <= 10) {
-                        console.log(button.id)
-                        newStr = newStr.concat(`${button.textContent}`);
-                        console.log(newStr);
-                    }
+                    if (newStr.length >= 9) {
+                        display.style.wordWrap = "break-word";
+                        if (newStr.length >= 20) {
+                            break;
+                        }
+
+                    } 
+                    console.log(button.id)
+                    newStr = newStr.concat(`${button.textContent}`);
+                    console.log(newStr);
                     break;
                 case "buttonClear":
                     newStr = newStr.slice(0, -1);
