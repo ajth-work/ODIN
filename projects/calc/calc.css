@@ -38,11 +38,11 @@ body {
 	grid-template-areas: 
 		"display display display display"
 		"blank blank blank blank" 
-		"buttonAllClear buttonClear buttonMultiply buttonDivide" 
+		"buttonAllClear buttonClear buttonDivide buttonMultiply " 
 		"button7 button8 button9 buttonPlus"
 		"button4 button5 button6 buttonMinus"
 		"button1 button2 button3 buttonEquals" 
-		"button0 buttonDot buttonNegPos buttonEquals";
+		"button0 button0 buttonDot buttonEquals";
 }
 
 #footer {
@@ -52,7 +52,8 @@ body {
 
 #display {
 	font-family: 'VT323', monospace;
-	font-size: 50px;
+	font-family: 'Monoton', cursive;
+	font-size: 40px;
 	grid-area: display;
 	display: flex;
 	flex-direction: column;
@@ -123,10 +124,6 @@ body {
 	grid-area: button0;
 }
 
-#buttonNegPos {
-	grid-area: buttonNegPos;
-}
-
 #buttonDot {
 	grid-area: buttonDot;
 }
@@ -158,4 +155,3 @@ body {
 #buttonAllClear {
 	grid-area: buttonAllClear
 }
-

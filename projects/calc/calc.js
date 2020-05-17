@@ -8,9 +8,8 @@
 // display
 function displayText() {
     const display = document.getElementById("display");
-    const buttons = document.querySelectorAll(`button`);
-    let newArr = [];
-    console.log([display.value])
+    const buttons = document.querySelectorAll("button");
+    let newStr = "";
     buttons.forEach((button) => {
         button.addEventListener("click", (e) => {
             switch (button.id) {
@@ -24,14 +23,20 @@ function displayText() {
                 case "button7":
                 case "button8":
                 case "button9":
-                    newArr.push(`${button.textContent}`);
-                    console.log([display.value]);
+                    if(newStr.length <= 10) {
+                        console.log(button.id)
+                        newStr = newStr.concat(`${button.textContent}`);
+                        console.log(newStr);
+                    }
+                    break;
+                case "buttonClear":
+                    newStr = newStr.slice(0, -1);
+                    console.log(newStr);
                     break;
                 case "buttonAllClear":
-                    newArr = [];
-                    break;
+                    newStr = "";
             }
-            display.value = newArr;
+            display.textContent = newStr;
         });
     });
 }
