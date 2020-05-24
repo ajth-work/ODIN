@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JANKEN SIMULATOR 2020</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="container">
+    <h1 style="text-align: center;">JANKEN SIMULATOR 2020</h1>
+    <h2 style="text-align: center;">Select one:</h2>
+    <div id="results-screen">
+        <div id="results-info"></div>
+    </div>
+    <div style="text-align: center;" id="score-counter"></div>
+    <div style="display: flex; justify-content: space-evenly;">
+        <button id="rockBtn" class="button">ROCK</button>
+        <button id="paperBtn" class="button">PAPER</button>
+        <button id="scissorsBtn" class="button">SCISSORS</button>
+    </div>        
+</div>
+</body>
+<script>
+// DOM MANIPULATION
+const container = document.getElementById('container');
+
+const resultsScreen = document.getElementById('results-screen');
+resultsScreen.style.border = '1px solid black';
+resultsScreen.style.backgroundColor = 'green';
+container.appendChild(resultsScreen);
+
+
+const resultsInfo = document.getElementById('results-info');
+resultsScreen.appendChild(resultsInfo);
+
+
+const scoreCounter = document.getElementById('score-counter');
+resultsScreen.appendChild(scoreCounter);
+
+// END DOM MANIPULATION
+
+//BUTTONS
+
+
+
+const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        switch (button.id) {
+            case 'rockBtn': 
+                playerSelection = 'rock';
+                break;
+            case 'paperBtn':
+                playerSelection = 'paper';
+                break;
+            case 'scissorsBtn':
+                playerSelection = 'scissors';
+                break;
+        } 
+        return playRound(playerSelection);
+    })
+    });
+//END BUTTONS
+
+// MAIN CODE
+function computerPlay() {
+    const selections = ['rock', 'paper', 'scissors'];
+    return selections[Math.floor(Math.random()*selections.length)]
+}
+
+let result;
+let playerScore = 0;
+let computerScore = 0;
+
+function playRound(playerSelection) {  
+computerSelection = computerPlay();
+if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === 'paper'  && computerSelection === 'rock')) {
+    result = 'win';
+} else if (playerSelection === computerSelection) {
+    result = 'tie';
+} else {
+    result = 'lose';
+    }
+    printResults(result);
+}
+
+function printResults() {
+    
+    if (result === 'win') {
+    playerScore++;
+    resultsInfo.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (result === 'lose') {
+    computerScore++;
+    resultsInfo.textContent ='You lose! ' + computerSelection + ' beats ' + playerSelection;
+    } else {
+    resultsInfo.textContent ='It\'s a tie!';
+    } scoreCounter.textContent = `Wins: ${playerScore}, Losses: ${computerScore}`;
+}
+
+
+
+
+
+// END MAIN CODE
+</script>
+</html>
