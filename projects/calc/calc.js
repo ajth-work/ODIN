@@ -1,4 +1,9 @@
+function operate(param1) {
+  console.log(param1)
+  param1 = eval(param1)
+ return param1
 
+}
 
 // add
 // subtract
@@ -79,6 +84,7 @@ function displayText() {
                     break;
                 case "buttonEquals":
                     play();
+                    newStr = operate(newStr);
                     break;
                 default:
                     play();
@@ -100,5 +106,5 @@ function displayText() {
 displayText();
 
 
-// when you click the number buttons, you should be soring the display value in a variable for next step use
+// when you click the number buttons, you should be storing the display value in a variable for next step use
 // store the numbers input when an operator is pressed
